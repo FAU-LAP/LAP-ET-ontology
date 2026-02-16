@@ -1,0 +1,292 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET">
+    <Prefix name="" IRI="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal>An LAP experimental techniques ontology</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="#ContactGeometry"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ElectricalQuantity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ElectricalTransportExperiment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ElectroopticalExperiment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#HallExperiment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#IVExperiment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LAPExperiment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MagneticalExperiment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MagneticalQuantity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MagnetoopticalExperiment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MeasurementSpecification"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#OpticalExperiment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PhysicalQuantities"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ThermalQuantity"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasControlVariable"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasMeasuredObservable"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasSpecification"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isControlVariableOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isMeasuredObservableOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isQuantityOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isSpecificationOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#relatesToQuantity"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AppliedGateVoltage"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AppliedMagneticField"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AppliedVoltage"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DeviceCurrent"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#FourTerminalGeometry"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#LongitudinalVoltageDrop"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SixTerminalGeometry"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Temperature"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TwoTerminalGeometry"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#VanderPauwGeometry"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#VerticalVoltageDrop"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#HallExperiment"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#ElectricalTransportExperiment"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasControlVariable"/>
+                <Class IRI="#ElectricalQuantity"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasMeasuredObservable"/>
+                <Class IRI="#ElectricalQuantity"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasSpecification"/>
+                <Class IRI="#ContactGeometry"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#HallExperiment"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasControlVariable"/>
+            <Class IRI="#ElectricalQuantity"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="#ContactGeometry"/>
+        <Class IRI="#MeasurementSpecification"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ElectricalQuantity"/>
+        <Class IRI="#PhysicalQuantities"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ElectricalTransportExperiment"/>
+        <Class IRI="#LAPExperiment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ElectroopticalExperiment"/>
+        <Class IRI="#LAPExperiment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HallExperiment"/>
+        <Class IRI="#LAPExperiment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#IVExperiment"/>
+        <Class IRI="#LAPExperiment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MagneticalExperiment"/>
+        <Class IRI="#LAPExperiment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MagneticalQuantity"/>
+        <Class IRI="#PhysicalQuantities"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MagnetoopticalExperiment"/>
+        <Class IRI="#LAPExperiment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#OpticalExperiment"/>
+        <Class IRI="#LAPExperiment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ThermalQuantity"/>
+        <Class IRI="#PhysicalQuantities"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#LAPExperiment"/>
+        <Class IRI="#MeasurementSpecification"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#LAPExperiment"/>
+        <Class IRI="#PhysicalQuantities"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#MeasurementSpecification"/>
+        <Class IRI="#PhysicalQuantities"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="#ElectricalQuantity"/>
+        <NamedIndividual IRI="#AppliedGateVoltage"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MagneticalQuantity"/>
+        <NamedIndividual IRI="#AppliedMagneticField"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ElectricalQuantity"/>
+        <NamedIndividual IRI="#AppliedVoltage"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ElectricalQuantity"/>
+        <NamedIndividual IRI="#DeviceCurrent"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ContactGeometry"/>
+        <NamedIndividual IRI="#FourTerminalGeometry"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ElectricalQuantity"/>
+        <NamedIndividual IRI="#LongitudinalVoltageDrop"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ContactGeometry"/>
+        <NamedIndividual IRI="#SixTerminalGeometry"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ThermalQuantity"/>
+        <NamedIndividual IRI="#Temperature"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ContactGeometry"/>
+        <NamedIndividual IRI="#TwoTerminalGeometry"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ContactGeometry"/>
+        <NamedIndividual IRI="#VanderPauwGeometry"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ElectricalQuantity"/>
+        <NamedIndividual IRI="#VerticalVoltageDrop"/>
+    </ClassAssertion>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasControlVariable"/>
+        <ObjectProperty IRI="#isControlVariableOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasMeasuredObservable"/>
+        <ObjectProperty IRI="#isMeasuredObservableOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasSpecification"/>
+        <ObjectProperty IRI="#isSpecificationOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#isQuantityOf"/>
+        <ObjectProperty IRI="#relatesToQuantity"/>
+    </InverseObjectProperties>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasControlVariable"/>
+        <Class IRI="#MeasurementSpecification"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasMeasuredObservable"/>
+        <Class IRI="#MeasurementSpecification"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasSpecification"/>
+        <Class IRI="#LAPExperiment"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#relatesToQuantity"/>
+        <Class IRI="#LAPExperiment"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasControlVariable"/>
+        <Class IRI="#PhysicalQuantities"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasMeasuredObservable"/>
+        <Class IRI="#PhysicalQuantities"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasSpecification"/>
+        <Class IRI="#MeasurementSpecification"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#relatesToQuantity"/>
+        <Class IRI="#PhysicalQuantities"/>
+    </ObjectPropertyRange>
+</Ontology>
+
