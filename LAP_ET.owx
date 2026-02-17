@@ -29,6 +29,9 @@
         <Class IRI="#ElectroopticalExperiment"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#FourTerminalIVExperiment"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#HallExperiment"/>
     </Declaration>
     <Declaration>
@@ -53,10 +56,22 @@
         <Class IRI="#OpticalExperiment"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#PhysicalQuantities"/>
+        <Class IRI="#PhysicalQuantity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SixTerminalHallExperiment"/>
     </Declaration>
     <Declaration>
         <Class IRI="#ThermalQuantity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TwoTerminalIVExperiment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#VanderPauwHallExperiment"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasContactGeometry"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasControlVariable"/>
@@ -66,6 +81,9 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasSpecification"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isContactGeometryOf"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#isControlVariableOf"/>
@@ -83,28 +101,28 @@
         <ObjectProperty IRI="#relatesToQuantity"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#AppliedGateVoltage"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#AppliedMagneticField"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#AppliedVoltage"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="#DeviceCurrent"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#DeviceTemperature"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DeviceVoltage"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ExternalMagneticField"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#FourTerminalGeometry"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#GateVoltage"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#LongitudinalVoltageDrop"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#SixTerminalGeometry"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Temperature"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#TwoTerminalGeometry"/>
@@ -115,38 +133,13 @@
     <Declaration>
         <NamedIndividual IRI="#VerticalVoltageDrop"/>
     </Declaration>
-    <EquivalentClasses>
-        <Class IRI="#HallExperiment"/>
-        <ObjectIntersectionOf>
-            <Class IRI="#ElectricalTransportExperiment"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="#hasControlVariable"/>
-                <Class IRI="#ElectricalQuantity"/>
-            </ObjectSomeValuesFrom>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="#hasMeasuredObservable"/>
-                <Class IRI="#ElectricalQuantity"/>
-            </ObjectSomeValuesFrom>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="#hasSpecification"/>
-                <Class IRI="#ContactGeometry"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="#HallExperiment"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#hasControlVariable"/>
-            <Class IRI="#ElectricalQuantity"/>
-        </ObjectSomeValuesFrom>
-    </EquivalentClasses>
     <SubClassOf>
         <Class IRI="#ContactGeometry"/>
         <Class IRI="#MeasurementSpecification"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#ElectricalQuantity"/>
-        <Class IRI="#PhysicalQuantities"/>
+        <Class IRI="#PhysicalQuantity"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#ElectricalTransportExperiment"/>
@@ -157,6 +150,19 @@
         <Class IRI="#LAPExperiment"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#FourTerminalIVExperiment"/>
+        <Class IRI="#LAPExperiment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FourTerminalIVExperiment"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasContactGeometry"/>
+            <ObjectOneOf>
+                <NamedIndividual IRI="#FourTerminalGeometry"/>
+            </ObjectOneOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#HallExperiment"/>
         <Class IRI="#LAPExperiment"/>
     </SubClassOf>
@@ -170,7 +176,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#MagneticalQuantity"/>
-        <Class IRI="#PhysicalQuantities"/>
+        <Class IRI="#PhysicalQuantity"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#MagnetoopticalExperiment"/>
@@ -181,8 +187,54 @@
         <Class IRI="#LAPExperiment"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#SixTerminalHallExperiment"/>
+        <Class IRI="#LAPExperiment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SixTerminalHallExperiment"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasContactGeometry"/>
+            <ObjectOneOf>
+                <NamedIndividual IRI="#SixTerminalGeometry"/>
+            </ObjectOneOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SixTerminalHallExperiment"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#isSpecificationOf"/>
+            <Class IRI="#HallExperiment"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#ThermalQuantity"/>
-        <Class IRI="#PhysicalQuantities"/>
+        <Class IRI="#PhysicalQuantity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TwoTerminalIVExperiment"/>
+        <Class IRI="#LAPExperiment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TwoTerminalIVExperiment"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasContactGeometry"/>
+            <ObjectOneOf>
+                <NamedIndividual IRI="#TwoTerminalGeometry"/>
+            </ObjectOneOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#VanderPauwHallExperiment"/>
+        <Class IRI="#LAPExperiment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#VanderPauwHallExperiment"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasContactGeometry"/>
+            <ObjectOneOf>
+                <NamedIndividual IRI="#VanderPauwGeometry"/>
+            </ObjectOneOf>
+        </ObjectAllValuesFrom>
     </SubClassOf>
     <DisjointClasses>
         <Class IRI="#LAPExperiment"/>
@@ -190,31 +242,35 @@
     </DisjointClasses>
     <DisjointClasses>
         <Class IRI="#LAPExperiment"/>
-        <Class IRI="#PhysicalQuantities"/>
+        <Class IRI="#PhysicalQuantity"/>
     </DisjointClasses>
     <DisjointClasses>
         <Class IRI="#MeasurementSpecification"/>
-        <Class IRI="#PhysicalQuantities"/>
+        <Class IRI="#PhysicalQuantity"/>
     </DisjointClasses>
-    <ClassAssertion>
-        <Class IRI="#ElectricalQuantity"/>
-        <NamedIndividual IRI="#AppliedGateVoltage"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#MagneticalQuantity"/>
-        <NamedIndividual IRI="#AppliedMagneticField"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#ElectricalQuantity"/>
-        <NamedIndividual IRI="#AppliedVoltage"/>
-    </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#ElectricalQuantity"/>
         <NamedIndividual IRI="#DeviceCurrent"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#ThermalQuantity"/>
+        <NamedIndividual IRI="#DeviceTemperature"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ElectricalQuantity"/>
+        <NamedIndividual IRI="#DeviceVoltage"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MagneticalQuantity"/>
+        <NamedIndividual IRI="#ExternalMagneticField"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#ContactGeometry"/>
         <NamedIndividual IRI="#FourTerminalGeometry"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ElectricalQuantity"/>
+        <NamedIndividual IRI="#GateVoltage"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#ElectricalQuantity"/>
@@ -223,10 +279,6 @@
     <ClassAssertion>
         <Class IRI="#ContactGeometry"/>
         <NamedIndividual IRI="#SixTerminalGeometry"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#ThermalQuantity"/>
-        <NamedIndividual IRI="#Temperature"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#ContactGeometry"/>
@@ -240,6 +292,18 @@
         <Class IRI="#ElectricalQuantity"/>
         <NamedIndividual IRI="#VerticalVoltageDrop"/>
     </ClassAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasContactGeometry"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isContactGeometryOf"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasContactGeometry"/>
+        <ObjectProperty IRI="#isContactGeometryOf"/>
+    </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="#hasControlVariable"/>
         <ObjectProperty IRI="#isControlVariableOf"/>
@@ -256,6 +320,12 @@
         <ObjectProperty IRI="#isQuantityOf"/>
         <ObjectProperty IRI="#relatesToQuantity"/>
     </InverseObjectProperties>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#isContactGeometryOf"/>
+    </FunctionalObjectProperty>
+    <InverseFunctionalObjectProperty>
+        <ObjectProperty IRI="#hasContactGeometry"/>
+    </InverseFunctionalObjectProperty>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasControlVariable"/>
         <Class IRI="#MeasurementSpecification"/>
@@ -274,11 +344,11 @@
     </ObjectPropertyDomain>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasControlVariable"/>
-        <Class IRI="#PhysicalQuantities"/>
+        <Class IRI="#PhysicalQuantity"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasMeasuredObservable"/>
-        <Class IRI="#PhysicalQuantities"/>
+        <Class IRI="#PhysicalQuantity"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasSpecification"/>
@@ -286,7 +356,11 @@
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#relatesToQuantity"/>
-        <Class IRI="#PhysicalQuantities"/>
+        <Class IRI="#PhysicalQuantity"/>
     </ObjectPropertyRange>
 </Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
 
