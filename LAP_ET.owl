@@ -1,0 +1,337 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET/"
+     xml:base="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET">
+        <rdfs:comment>An LAP experimental techniques ontology</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#hasContactGeometry -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#hasContactGeometry">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#isContactGeometryOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#LAPExperiment"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#ContactGeometry"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#hasControlVariable -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#hasControlVariable">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#isControlVariableOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#LAPExperiment"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#PhysicalQuantity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#hasMeasuredObservable -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#hasMeasuredObservable">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#isMeasuredObservableOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#LAPExperiment"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#PhysicalQuantity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#hasSpecification -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#hasSpecification">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#isSpecificationOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#LAPExperiment"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#MeasurementSpecification"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#isContactGeometryOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#isContactGeometryOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#isControlVariableOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#isControlVariableOf"/>
+    
+
+
+    <!-- http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#isMeasuredObservableOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#isMeasuredObservableOf"/>
+    
+
+
+    <!-- http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#isQuantityOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#isQuantityOf">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#relatesToQuantity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#isSpecificationOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#isSpecificationOf"/>
+    
+
+
+    <!-- http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#relatesToQuantity -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#relatesToQuantity">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#LAPExperiment"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#PhysicalQuantity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#ContactGeometry -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#ContactGeometry">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#MeasurementSpecification"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#DeviceCurrent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#DeviceCurrent">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#ElectricalQuantity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#DeviceVoltage -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#DeviceVoltage">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#ElectricalQuantity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#ElectricalExperiment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#ElectricalExperiment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#LAPExperiment"/>
+        <rdfs:comment>An experiment that probes a solid via its electrical response by applying and/or measureing electrical quantities</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#ElectricalQuantity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#ElectricalQuantity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#PhysicalQuantity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#ElectricalTransportExperiment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#ElectricalTransportExperiment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#ElectricalExperiment"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#LAPExperiment"/>
+        <rdfs:comment>An experiment that probes electric charge transport in a solid by applying and/or measuring electrical physical quantities</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#ElectroopticalExperiment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#ElectroopticalExperiment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#LAPExperiment"/>
+        <rdfs:comment>An experiment that probes the coupling between electrical excitation/fields and optical response (or vice versa) of a solid</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#ExternalMagneticField -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#ExternalMagneticField">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#MagneticalQuantity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#FourTerminalIVExperiment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#FourTerminalIVExperiment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#IVExperiment"/>
+        <rdfs:comment>An IV experiment that uses the 4-terminal device geometry, measuring a longitudinal voltage drop across the device under applied device current/voltage, typically as a function of device current/voltage, temperature or gate voltage</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#HallExperiment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#HallExperiment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#ElectricalTransportExperiment"/>
+        <rdfs:comment>An experiment that probes electrical transport in a solid state device via the Hall effect by measuring voltage drops across the device under applied device current/voltage and external magnetic field, typically as a function of external magnetic field, device current/voltage or temperature</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#IVExperiment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#IVExperiment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#ElectricalTransportExperiment"/>
+        <rdfs:comment>An experiment that probes electric transport in a solid state device by measuring a current-voltage relation, typically as a function of device voltage/current, temperature or gate voltage</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#LAPExperiment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#LAPExperiment">
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#MeasurementSpecification"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#PhysicalQuantity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#LongitudinalVoltageDrop -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#LongitudinalVoltageDrop">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#ElectricalQuantity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#MagneticExperiment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#MagneticExperiment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#LAPExperiment"/>
+        <rdfs:comment>An experiment that probes a solid via its magnetic or spin response by applying and/or measuring magnetic quantities</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#MagneticalQuantity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#MagneticalQuantity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#PhysicalQuantity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#MagnetoopticalExperiment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#MagnetoopticalExperiment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#LAPExperiment"/>
+        <rdfs:comment>An experiment that probes the coupling between magnetic/spin states and optical properties</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#MeasurementSpecification -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#MeasurementSpecification">
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#PhysicalQuantity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#OpticalExperiment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#OpticalExperiment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#LAPExperiment"/>
+        <rdfs:comment>An experiment that probes a solid via its interaction with light by applying and/or measuring optical quantities</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#PhysicalQuantity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#PhysicalQuantity"/>
+    
+
+
+    <!-- http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#SixTerminalHallExperiment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#SixTerminalHallExperiment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#HallExperiment"/>
+        <rdfs:comment>A Hall experiment that uses the 6-terminal device geometry, measuring longitudinal and vertical voltage drops across the device under applied device current/voltage and external magnetic field, typically as a function of external magnetic field, device current/voltage or temperature</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#Temperature -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#Temperature">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#ThermalQuantity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#ThermalQuantity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#ThermalQuantity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#PhysicalQuantity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#TwoTerminalIVExperiment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#TwoTerminalIVExperiment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#IVExperiment"/>
+        <rdfs:comment>An IV experiment that uses the 2-terminal device geometry, measuring a device current under applied device voltage or vice versa, typically as a function of device current/voltage, temperature or gate voltage</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#VanderPauwHallExperiment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#VanderPauwHallExperiment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#HallExperiment"/>
+        <rdfs:comment>A Hall experiment that uses the Van der Pauw device geometry, measuring a vertical voltage drop across the device under applied device current/voltage and external magnetic field, typically as a function of external magnetic field, device current/voltage or temperature</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#VerticalVoltageDrop -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#VerticalVoltageDrop">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#ElectricalQuantity"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
