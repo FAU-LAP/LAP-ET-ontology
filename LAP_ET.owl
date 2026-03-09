@@ -166,7 +166,7 @@
     <owl:Class rdf:about="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#ElectricalTransportExperiment">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#ElectricalExperiment"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#LAPExperiment"/>
-        <rdfs:comment>An experiment that probes electric charge transport in a solid by applying and/or measuring electrical physical quantities</rdfs:comment>
+        <rdfs:comment>A subclass of electrical experiment that characterizes the dynamics of charge carriers within a solid state material by measuring the current flow resulting from an applied potential.</rdfs:comment>
     </owl:Class>
     
 
