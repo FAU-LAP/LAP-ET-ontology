@@ -192,10 +192,67 @@
     
 
 
+    <!-- http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#FourTerminalContactGeometry -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#FourTerminalContactGeometry">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#ContactGeometry"/>
+        <rdfs:comment>A subclass of contact geometries with four electrical contacts</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#FourTerminalIVExperiment -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#FourTerminalIVExperiment">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#IVExperiment"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#relatesToQuantity"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#DeviceCurrent"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#relatesToQuantity"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#DeviceVoltage"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#relatesToQuantity"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#LongitudinalVoltageDrop"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#relatesToQuantity"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#Temperature"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#hasControlVariable"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#DeviceCurrent"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#hasControlVariable"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#DeviceVoltage"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#hasContactGeometry"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#FourTerminalContactGeometry"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#hasMeasuredObservable"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#LongitudinalVoltageDrop"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment>A subclass of IV experiments that use the 4-terminal device geometry, measuring a longitudinal voltage drop across the device under applied device current/voltage</rdfs:comment>
     </owl:Class>
     
@@ -282,10 +339,91 @@
     
 
 
+    <!-- http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#SixTerminalContactGeometry -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#SixTerminalContactGeometry">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#ContactGeometry"/>
+        <rdfs:comment>A subclass of contact geometries with six electrical contacts</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#SixTerminalHallExperiment -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#SixTerminalHallExperiment">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#HallExperiment"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#hasControlVariable"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#DeviceCurrent"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#hasControlVariable"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#DeviceVoltage"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#hasControlVariable"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#ExternalMagneticField"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#hasMeasuredObservable"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#LongitudinalVoltageDrop"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#hasMeasuredObservable"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#VerticalVoltageDrop"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#relatesToQuantity"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#DeviceCurrent"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#relatesToQuantity"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#DeviceVoltage"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#relatesToQuantity"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#ExternalMagneticField"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#relatesToQuantity"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#LongitudinalVoltageDrop"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#relatesToQuantity"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#Temperature"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#relatesToQuantity"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#VerticalVoltageDrop"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#hasContactGeometry"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#SixTerminalContactGeometry"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment>A subcalss of Hall experiments that use the 6-terminal device geometry, measuring longitudinal and vertical voltage drops across the device under applied device current/voltage and external magnetic field.</rdfs:comment>
     </owl:Class>
     
@@ -300,11 +438,85 @@
     
 
 
+    <!-- http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#TwoTerminalContactGeometry -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#TwoTerminalContactGeometry">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#ContactGeometry"/>
+        <rdfs:comment>A subclass of contact geometries with two electrical contacts</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#TwoTerminalIVExperiment -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#TwoTerminalIVExperiment">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#IVExperiment"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#relatesToQuantity"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#DeviceCurrent"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#relatesToQuantity"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#DeviceVoltage"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#relatesToQuantity"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#Temperature"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#hasControlVariable"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#DeviceCurrent"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#hasControlVariable"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#DeviceVoltage"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#hasMeasuredObservable"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#DeviceCurrent"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#hasMeasuredObservable"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#DeviceVoltage"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#hasContactGeometry"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#TwoTerminalContactGeometry"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment>A subclass of  IV experiments that use the 2-terminal device geometry, measuring a device current under applied device voltage or vice versa.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#VanderPauwContactGeometry -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#VanderPauwContactGeometry">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#FourTerminalContactGeometry"/>
+        <rdfs:comment>A subclass of contact geometries with four electrical contacts in a Van-der-Pauw arrangement</rdfs:comment>
     </owl:Class>
     
 
@@ -313,6 +525,66 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#VanderPauwHallExperiment">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#HallExperiment"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#hasControlVariable"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#DeviceCurrent"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#hasControlVariable"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#DeviceVoltage"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#hasControlVariable"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#ExternalMagneticField"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#relatesToQuantity"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#DeviceCurrent"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#relatesToQuantity"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#DeviceVoltage"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#relatesToQuantity"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#ExternalMagneticField"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#relatesToQuantity"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#Temperature"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#relatesToQuantity"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#VerticalVoltageDrop"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#hasContactGeometry"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#VanderPauwContactGeometry"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#hasMeasuredObservable"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#VerticalVoltageDrop"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment>A subclass of Hall experiments that use the Van der Pauw device geometry, measuring a vertical voltage drop across the device under applied device current/voltage and external magnetic field.</rdfs:comment>
     </owl:Class>
     
