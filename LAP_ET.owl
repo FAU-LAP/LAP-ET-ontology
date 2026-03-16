@@ -124,6 +124,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#ContactGeometry">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#MeasurementSpecification"/>
+        <rdfs:comment>A subclass of measurement specifications defining the electric contact geometry of a solid-state device</rdfs:comment>
     </owl:Class>
     
 
@@ -132,6 +133,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#DeviceCurrent">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#ElectricalQuantity"/>
+        <rdfs:comment>A subclass of electrical quantities that describes the strength of an electric current flowing through a solid-state device.</rdfs:comment>
     </owl:Class>
     
 
@@ -140,6 +142,16 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#DeviceVoltage">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#ElectricalQuantity"/>
+        <rdfs:comment>A subclass of electrical quantities that describes the strength of an applied electric potential difference inside a solid-state device.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#ElectricTransportExperiment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#ElectricTransportExperiment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#LAPExperiment"/>
+        <rdfs:comment>A subclass of LAP experiments that investigate the dynamics of charge carriers in a solid-state device by applying and/or measuring electric quantities</rdfs:comment>
     </owl:Class>
     
 
@@ -148,7 +160,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#ElectricalExperiment">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#LAPExperiment"/>
-        <rdfs:comment>An experiment that probes a solid via its electrical response by applying and/or measureing electrical quantities</rdfs:comment>
+        <rdfs:comment>A subclass of LAP experiments that investigate a solid-state device via its electrical response by applying and/or measureing electrical quantities</rdfs:comment>
     </owl:Class>
     
 
@@ -157,16 +169,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#ElectricalQuantity">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#PhysicalQuantity"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#ElectricalTransportExperiment -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#ElectricalTransportExperiment">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#ElectricalExperiment"/>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#LAPExperiment"/>
-        <rdfs:comment>A subclass of electrical experiment that characterizes the dynamics of charge carriers within a solid state material by measuring the current flow resulting from an applied potential.</rdfs:comment>
+        <rdfs:comment>A subclass of physical quantities that are measurable and/or applicable quantities associated with the presence, motion, or interaction of electric charge in a solid-state device</rdfs:comment>
     </owl:Class>
     
 
@@ -175,7 +178,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#ElectroopticalExperiment">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#LAPExperiment"/>
-        <rdfs:comment>An experiment that probes the coupling between electrical excitation/fields and optical response (or vice versa) of a solid</rdfs:comment>
+        <rdfs:comment>A subclass of LAP experiments that investigate the coupling between electrical excitation/fields and optical response (or vice versa) of a solid-state device</rdfs:comment>
     </owl:Class>
     
 
@@ -183,7 +186,8 @@
     <!-- http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#ExternalMagneticField -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#ExternalMagneticField">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#MagneticalQuantity"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#PhysicalQuantity"/>
+        <rdfs:comment>A subclass of physical quantities that describes the strength of an applied external magnetic field during an LAP experiment.</rdfs:comment>
     </owl:Class>
     
 
@@ -192,7 +196,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#FourTerminalIVExperiment">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#IVExperiment"/>
-        <rdfs:comment>An IV experiment that uses the 4-terminal device geometry, measuring a longitudinal voltage drop across the device under applied device current/voltage, typically as a function of device current/voltage, temperature or gate voltage</rdfs:comment>
+        <rdfs:comment>A subclass of IV experiments that use the 4-terminal device geometry, measuring a longitudinal voltage drop across the device under applied device current/voltage</rdfs:comment>
     </owl:Class>
     
 
@@ -200,8 +204,8 @@
     <!-- http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#HallExperiment -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#HallExperiment">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#ElectricalTransportExperiment"/>
-        <rdfs:comment>An experiment that probes electrical transport in a solid state device via the Hall effect by measuring voltage drops across the device under applied device current/voltage and external magnetic field, typically as a function of external magnetic field, device current/voltage or temperature</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#ElectricTransportExperiment"/>
+        <rdfs:comment>A subclass of electric transport experiments that investigate electric transport in a solid-state device via the Hall effect by measuring voltage drops across the device under applied device current/voltage and external magnetic field.</rdfs:comment>
     </owl:Class>
     
 
@@ -209,8 +213,8 @@
     <!-- http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#IVExperiment -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#IVExperiment">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#ElectricalTransportExperiment"/>
-        <rdfs:comment>An experiment that probes electric transport in a solid state device by measuring a current-voltage relation, typically as a function of device voltage/current, temperature or gate voltage</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#ElectricTransportExperiment"/>
+        <rdfs:comment>A subclass of electric transport experiments that investigate electric transport in a solid-state device by measuring a device current / voltage drop or device voltage / device current relation.</rdfs:comment>
     </owl:Class>
     
 
@@ -220,6 +224,7 @@
     <owl:Class rdf:about="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#LAPExperiment">
         <owl:disjointWith rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#MeasurementSpecification"/>
         <owl:disjointWith rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#PhysicalQuantity"/>
+        <rdfs:comment>A class of experiments that are performed at the chair of applied physics at Friedrich-Alexander Universität Erlangen/Nürnberg</rdfs:comment>
     </owl:Class>
     
 
@@ -228,6 +233,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#LongitudinalVoltageDrop">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#ElectricalQuantity"/>
+        <rdfs:comment>A subclass of electrical quantities that describes the strength of an emergent electric potential difference along the long axis of a solid-state device.</rdfs:comment>
     </owl:Class>
     
 
@@ -236,15 +242,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#MagneticExperiment">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#LAPExperiment"/>
-        <rdfs:comment>An experiment that probes a solid via its magnetic or spin response by applying and/or measuring magnetic quantities</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#MagneticalQuantity -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#MagneticalQuantity">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#PhysicalQuantity"/>
+        <rdfs:comment>A subclass of LAP experiments that investigate a solid-state device via its magnetic or spin response by applying and/or measuring magnetic quantities</rdfs:comment>
     </owl:Class>
     
 
@@ -253,7 +251,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#MagnetoopticalExperiment">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#LAPExperiment"/>
-        <rdfs:comment>An experiment that probes the coupling between magnetic/spin states and optical properties</rdfs:comment>
+        <rdfs:comment>A subclass of LAP experiments that investigate the coupling between magnetic/spin states and optical properties of a solid-state device</rdfs:comment>
     </owl:Class>
     
 
@@ -262,6 +260,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#MeasurementSpecification">
         <owl:disjointWith rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#PhysicalQuantity"/>
+        <rdfs:comment>A class of specifications for LAP experiments</rdfs:comment>
     </owl:Class>
     
 
@@ -270,14 +269,16 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#OpticalExperiment">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#LAPExperiment"/>
-        <rdfs:comment>An experiment that probes a solid via its interaction with light by applying and/or measuring optical quantities</rdfs:comment>
+        <rdfs:comment>A subclass of LAP experiments that investigate a solid-state device via its interaction with light by applying and/or measuring optical quantities</rdfs:comment>
     </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#PhysicalQuantity -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#PhysicalQuantity"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#PhysicalQuantity">
+        <rdfs:comment>A class of physical quantities applied and/or measured in an LAP experiment</rdfs:comment>
+    </owl:Class>
     
 
 
@@ -285,7 +286,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#SixTerminalHallExperiment">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#HallExperiment"/>
-        <rdfs:comment>A Hall experiment that uses the 6-terminal device geometry, measuring longitudinal and vertical voltage drops across the device under applied device current/voltage and external magnetic field, typically as a function of external magnetic field, device current/voltage or temperature</rdfs:comment>
+        <rdfs:comment>A subcalss of Hall experiments that use the 6-terminal device geometry, measuring longitudinal and vertical voltage drops across the device under applied device current/voltage and external magnetic field.</rdfs:comment>
     </owl:Class>
     
 
@@ -293,15 +294,8 @@
     <!-- http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#Temperature -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#Temperature">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#ThermalQuantity"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#ThermalQuantity -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#ThermalQuantity">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#PhysicalQuantity"/>
+        <rdfs:comment>A subclass of physical quantities that describes the value of a measured and/or applied temperature during an LAP experiment.</rdfs:comment>
     </owl:Class>
     
 
@@ -310,7 +304,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#TwoTerminalIVExperiment">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#IVExperiment"/>
-        <rdfs:comment>An IV experiment that uses the 2-terminal device geometry, measuring a device current under applied device voltage or vice versa, typically as a function of device current/voltage, temperature or gate voltage</rdfs:comment>
+        <rdfs:comment>A subclass of  IV experiments that use the 2-terminal device geometry, measuring a device current under applied device voltage or vice versa.</rdfs:comment>
     </owl:Class>
     
 
@@ -319,7 +313,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#VanderPauwHallExperiment">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#HallExperiment"/>
-        <rdfs:comment>A Hall experiment that uses the Van der Pauw device geometry, measuring a vertical voltage drop across the device under applied device current/voltage and external magnetic field, typically as a function of external magnetic field, device current/voltage or temperature</rdfs:comment>
+        <rdfs:comment>A subclass of Hall experiments that use the Van der Pauw device geometry, measuring a vertical voltage drop across the device under applied device current/voltage and external magnetic field.</rdfs:comment>
     </owl:Class>
     
 
@@ -328,6 +322,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#VerticalVoltageDrop">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#ElectricalQuantity"/>
+        <rdfs:comment>A subclass of electrical quantities that describes the strength of an emergent electric potential difference perpendicular to the long axis of a solid-state device.</rdfs:comment>
     </owl:Class>
 </rdf:RDF>
 
