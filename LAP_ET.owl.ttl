@@ -1,0 +1,346 @@
+@prefix : <http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET/> .
+@prefix lapet: <http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#VerticalVoltageDrop>
+        rdf:type         owl:Class;
+        rdfs:subClassOf  <http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#ElectricalQuantity> .
+
+<http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#VanderPauwHallExperiment>
+        rdf:type         owl:Class;
+        rdfs:comment     "A Hall experiment that uses the Van der Pauw device geometry, measuring a vertical voltage drop across the device under applied device current/voltage and external magnetic field, typically as a function of external magnetic field, device current/voltage or temperature";
+        rdfs:subClassOf  <http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#HallExperiment> .
+
+<http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#TwoTerminalIVExperiment>
+        rdf:type         owl:Class;
+        rdfs:comment     "An IV experiment that uses the 2-terminal device geometry, measuring a device current under applied device voltage or vice versa, typically as a function of device current/voltage, temperature or gate voltage";
+        rdfs:subClassOf  <http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#IVExperiment> .
+
+<http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#ThermalQuantity>
+        rdf:type         owl:Class;
+        rdfs:subClassOf  <http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#PhysicalQuantity> .
+
+<http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#Temperature>
+        rdf:type         owl:Class;
+        rdfs:subClassOf  <http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#ThermalQuantity> .
+
+<http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#SixTerminalHallExperiment>
+        rdf:type         owl:Class;
+        rdfs:comment     "A Hall experiment that uses the 6-terminal device geometry, measuring longitudinal and vertical voltage drops across the device under applied device current/voltage and external magnetic field, typically as a function of external magnetic field, device current/voltage or temperature";
+        rdfs:subClassOf  <http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#HallExperiment> .
+
+<http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#PhysicalQuantity>
+        rdf:type  owl:Class .
+
+<http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#OpticalExperiment>
+        rdf:type         owl:Class;
+        rdfs:comment     "An experiment that probes a solid via its interaction with light by applying and/or measuring optical quantities";
+        rdfs:subClassOf  <http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#LAPExperiment> .
+
+<http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#MeasurementSpecification>
+        rdf:type          owl:Class;
+        owl:disjointWith  <http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#PhysicalQuantity> .
+
+<http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#MagnetoopticalExperiment>
+        rdf:type         owl:Class;
+        rdfs:comment     "An experiment that probes the coupling between magnetic/spin states and optical properties";
+        rdfs:subClassOf  <http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#LAPExperiment> .
+
+<http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#MagneticalQuantity>
+        rdf:type         owl:Class;
+        rdfs:subClassOf  <http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#PhysicalQuantity> .
+
+<http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#MagneticExperiment>
+        rdf:type         owl:Class;
+        rdfs:comment     "An experiment that probes a solid via its magnetic or spin response by applying and/or measuring magnetic quantities";
+        rdfs:subClassOf  <http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#LAPExperiment> .
+
+<http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#LongitudinalVoltageDrop>
+        rdf:type         owl:Class;
+        rdfs:subClassOf  <http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#ElectricalQuantity> .
+
+<http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#LAPExperiment>
+        rdf:type          owl:Class;
+        owl:disjointWith  <http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#PhysicalQuantity> , <http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#MeasurementSpecification> .
+
+<http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#IVExperiment>
+        rdf:type         owl:Class;
+        rdfs:comment     "An experiment that probes electric transport in a solid state device by measuring a current-voltage relation, typically as a function of device voltage/current, temperature or gate voltage";
+        rdfs:subClassOf  <http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#ElectricalTransportExperiment> .
+
+<http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#HallExperiment>
+        rdf:type         owl:Class;
+        rdfs:comment     "An experiment that probes electrical transport in a solid state device via the Hall effect by measuring voltage drops across the device under applied device current/voltage and external magnetic field, typically as a function of external magnetic field, device current/voltage or temperature";
+        rdfs:subClassOf  <http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#ElectricalTransportExperiment> .
+
+<http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#FourTerminalIVExperiment>
+        rdf:type         owl:Class;
+        rdfs:comment     "An IV experiment that uses the 4-terminal device geometry, measuring a longitudinal voltage drop across the device under applied device current/voltage, typically as a function of device current/voltage, temperature or gate voltage";
+        rdfs:subClassOf  <http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#IVExperiment>;
+        rdfs:subClassOf  [ rdf:type            owl:Restriction;
+                           owl:onProperty      <http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#hasContactGeometry>;
+                           owl:someValuesFrom  <http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#FourTerminalContactGeometry>
+                         ] .
+
+<http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#ExternalMagneticField>
+        rdf:type         owl:Class;
+        rdfs:subClassOf  <http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#MagneticalQuantity> .
+
+<http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#ElectroopticalExperiment>
+        rdf:type         owl:Class;
+        rdfs:comment     "An experiment that probes the coupling between electrical excitation/fields and optical response (or vice versa) of a solid";
+        rdfs:subClassOf  <http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#LAPExperiment> .
+
+<http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#ElectricalTransportExperiment>
+        rdf:type         owl:Class;
+        rdfs:comment     "A subclass of electrical experiment that characterizes the dynamics of charge carriers within a solid state material by measuring the current flow resulting from an applied potential.";
+        rdfs:subClassOf  <http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#LAPExperiment> , <http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#ElectricalExperiment> .
+
+<http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#ElectricalQuantity>
+        rdf:type         owl:Class;
+        rdfs:subClassOf  <http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#PhysicalQuantity> .
+
+<http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#ElectricalExperiment>
+        rdf:type         owl:Class;
+        rdfs:comment     "An experiment that probes a solid via its electrical response by applying and/or measureing electrical quantities";
+        rdfs:subClassOf  <http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#LAPExperiment> .
+
+<http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#DeviceVoltage>
+        rdf:type         owl:Class;
+        rdfs:subClassOf  <http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#ElectricalQuantity> .
+
+<http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#DeviceCurrent>
+        rdf:type         owl:Class;
+        rdfs:subClassOf  <http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#ElectricalQuantity> .
+
+<http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#FourTerminalContactGeometry>
+        rdf:type         owl:Class;
+        rdfs:subClassOf  <http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#ContactGeometry> .
+
+<http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#ContactGeometry>
+        rdf:type         owl:Class;
+        rdfs:subClassOf  <http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#MeasurementSpecification> .
+
+<http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#relatesToQuantity>
+        rdf:type     owl:ObjectProperty;
+        rdfs:domain  <http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#LAPExperiment>;
+        rdfs:range   <http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#PhysicalQuantity> .
+
+<http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#isSpecificationOf>
+        rdf:type  owl:ObjectProperty .
+
+<http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#isQuantityOf>
+        rdf:type       owl:ObjectProperty;
+        owl:inverseOf  <http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#relatesToQuantity> .
+
+<http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#isMeasuredObservableOf>
+        rdf:type  owl:ObjectProperty .
+
+<http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#isControlVariableOf>
+        rdf:type  owl:ObjectProperty .
+
+<http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#isContactGeometryOf>
+        rdf:type            owl:FunctionalProperty , owl:ObjectProperty;
+        rdfs:subPropertyOf  owl:topObjectProperty .
+
+<http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#hasSpecification>
+        rdf:type       owl:ObjectProperty;
+        rdfs:domain    <http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#ExperimentRun>;
+        rdfs:range     <http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#MeasurementSpecification>;
+        owl:inverseOf  <http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#isSpecificationOf> .
+
+<http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#hasMeasuredObservable>
+        rdf:type       owl:ObjectProperty;
+        rdfs:domain    <http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#ExperimentRun>;
+        rdfs:range     <http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#PhysicalQuantity>;
+        owl:inverseOf  <http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#isMeasuredObservableOf> .
+
+<http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#hasControlVariable>
+        rdf:type       owl:ObjectProperty;
+        rdfs:domain    <http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#ExperimentRun>;
+        rdfs:range     <http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#PhysicalQuantity>;
+        owl:inverseOf  <http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#isControlVariableOf> .
+
+<http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#hasContactGeometry>
+        rdf:type            owl:InverseFunctionalProperty , owl:ObjectProperty;
+        rdfs:domain         <http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#ExperimentRun>;
+        rdfs:range          <http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#ContactGeometry>;
+        rdfs:subPropertyOf  owl:topObjectProperty;
+        owl:inverseOf       <http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#isContactGeometryOf> .
+
+<http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET>
+        rdf:type      owl:Ontology;
+        rdfs:comment  "An LAP experimental techniques ontology" .
+
+# ------------------------------------------------------------------
+# OWL extension for standardized 6-terminal Hall datasets
+# ------------------------------------------------------------------
+
+lapet:ExperimentType
+        rdf:type  owl:Class .
+
+lapet:ExperimentRun
+        rdf:type  owl:Class .
+
+lapet:LAPExperiment
+        rdfs:subClassOf  lapet:ExperimentType .
+
+lapet:hasExperimentType
+        rdf:type     owl:ObjectProperty;
+        rdfs:domain  lapet:ExperimentRun;
+        rdfs:range   lapet:ExperimentType .
+
+lapet:Channel
+        rdf:type  owl:Class .
+
+lapet:CurrentOrVoltageControl
+        rdf:type         owl:Class;
+        rdfs:subClassOf  lapet:ElectricalQuantity .
+
+lapet:SixTerminalContactGeometry
+        rdf:type         owl:Class;
+        rdfs:subClassOf  lapet:ContactGeometry .
+
+lapet:SixTerminalHallSpecificationV1
+        rdf:type         owl:Class;
+        rdfs:comment     "Standardized specification profile for 6-terminal Hall measurements to ensure cross-dataset comparability.";
+        rdfs:subClassOf  lapet:MeasurementSpecification .
+
+lapet:assignedChannel
+        rdf:type     owl:ObjectProperty;
+        rdfs:domain  lapet:PhysicalQuantity;
+        rdfs:range   lapet:Channel .
+
+lapet:DeviceCurrent
+        rdfs:subClassOf  lapet:CurrentOrVoltageControl .
+
+lapet:DeviceVoltage
+        rdfs:subClassOf  lapet:CurrentOrVoltageControl .
+
+lapet:SixTerminalHallRun
+        rdf:type         owl:Class;
+        rdfs:comment     "A run-level profile for 6-terminal Hall measurements that is used for dataset comparability validation.";
+        rdfs:subClassOf  lapet:ExperimentRun;
+        rdfs:subClassOf  [ rdf:type       owl:Restriction;
+                           owl:onProperty  lapet:hasExperimentType;
+                           owl:hasValue    lapet:SixTerminalHallExperiment
+                         ];
+        rdfs:subClassOf  [ rdf:type            owl:Restriction;
+                           owl:onProperty      lapet:hasSpecification;
+                           owl:someValuesFrom  lapet:SixTerminalHallSpecificationV1
+                         ];
+        rdfs:subClassOf  [ rdf:type            owl:Restriction;
+                           owl:onProperty      lapet:hasContactGeometry;
+                           owl:someValuesFrom  lapet:SixTerminalContactGeometry
+                         ];
+        rdfs:subClassOf  [ rdf:type            owl:Restriction;
+                           owl:onProperty      lapet:hasControlVariable;
+                           owl:someValuesFrom  lapet:CurrentOrVoltageControl
+                         ];
+        rdfs:subClassOf  [ rdf:type            owl:Restriction;
+                           owl:onProperty      lapet:hasControlVariable;
+                           owl:someValuesFrom  lapet:ExternalMagneticField
+                         ];
+        rdfs:subClassOf  [ rdf:type            owl:Restriction;
+                           owl:onProperty      lapet:hasMeasuredObservable;
+                           owl:someValuesFrom  lapet:LongitudinalVoltageDrop
+                         ];
+        rdfs:subClassOf  [ rdf:type            owl:Restriction;
+                           owl:onProperty      lapet:hasMeasuredObservable;
+                           owl:someValuesFrom  lapet:VerticalVoltageDrop
+                         ] .
+
+# ------------------------------------------------------------------
+# Example individuals for SHACL validation (one valid, two invalid)
+# ------------------------------------------------------------------
+
+# Channels
+lapet:ch_field_ok_01 a owl:NamedIndividual, lapet:Channel .
+lapet:ch_current_ok_01 a owl:NamedIndividual, lapet:Channel .
+lapet:ch_vxx_ok_01 a owl:NamedIndividual, lapet:Channel .
+lapet:ch_vxy_ok_01 a owl:NamedIndividual, lapet:Channel .
+lapet:ch_temp_ok_01 a owl:NamedIndividual, lapet:Channel .
+
+lapet:ch_vxx_bad_01a a owl:NamedIndividual, lapet:Channel .
+lapet:ch_vxx_bad_01b a owl:NamedIndividual, lapet:Channel .
+lapet:ch_field_bad_02 a owl:NamedIndividual, lapet:Channel .
+lapet:ch_temp_bad_02 a owl:NamedIndividual, lapet:Channel .
+lapet:ch_vxx_bad_02 a owl:NamedIndividual, lapet:Channel .
+
+# Shared class-typed resources
+lapet:spec6_v1_ok_01 a owl:NamedIndividual, lapet:SixTerminalHallSpecificationV1 .
+lapet:spec6_v1_bad_02a a owl:NamedIndividual, lapet:SixTerminalHallSpecificationV1 .
+lapet:spec6_v1_bad_02b a owl:NamedIndividual, lapet:SixTerminalHallSpecificationV1 .
+
+lapet:geom6_ok_01 a owl:NamedIndividual, lapet:SixTerminalContactGeometry .
+lapet:geom6_ok_02 a owl:NamedIndividual, lapet:SixTerminalContactGeometry .
+lapet:geom4_bad_01 a owl:NamedIndividual, lapet:FourTerminalContactGeometry .
+
+# Controls/observables for the conforming run
+lapet:ctrl_field_ok_01 a owl:NamedIndividual, lapet:ExternalMagneticField ;
+  lapet:assignedChannel lapet:ch_field_ok_01 .
+
+lapet:ctrl_current_ok_01 a owl:NamedIndividual, lapet:DeviceCurrent ;
+  lapet:assignedChannel lapet:ch_current_ok_01 .
+
+lapet:obs_vxx_ok_01 a owl:NamedIndividual, lapet:LongitudinalVoltageDrop ;
+  lapet:assignedChannel lapet:ch_vxx_ok_01 .
+
+lapet:obs_vxy_ok_01 a owl:NamedIndividual, lapet:VerticalVoltageDrop ;
+  lapet:assignedChannel lapet:ch_vxy_ok_01 .
+
+lapet:obs_temp_ok_01 a owl:NamedIndividual, lapet:Temperature ;
+  lapet:assignedChannel lapet:ch_temp_ok_01 .
+
+# Controls/observables for invalid run A
+lapet:ctrl_field_bad_01 a owl:NamedIndividual, lapet:ExternalMagneticField .
+
+lapet:obs_vxx_bad_01 a owl:NamedIndividual, lapet:LongitudinalVoltageDrop ;
+  lapet:assignedChannel lapet:ch_vxx_bad_01a, lapet:ch_vxx_bad_01b .
+
+# Controls/observables for invalid run B
+lapet:ctrl_field_bad_02 a owl:NamedIndividual, lapet:ExternalMagneticField ;
+  lapet:assignedChannel lapet:ch_field_bad_02 .
+
+lapet:ctrl_temp_bad_02 a owl:NamedIndividual, lapet:Temperature ;
+  lapet:assignedChannel lapet:ch_temp_bad_02 .
+
+lapet:obs_vxx_bad_02 a owl:NamedIndividual, lapet:LongitudinalVoltageDrop ;
+  lapet:assignedChannel lapet:ch_vxx_bad_02 .
+
+lapet:obs_vxy_bad_02 a owl:NamedIndividual, lapet:VerticalVoltageDrop .
+
+# Conforming dataset instance
+lapet:run6hall_ok_01 a owl:NamedIndividual, lapet:SixTerminalHallRun ;
+  lapet:hasExperimentType lapet:SixTerminalHallExperiment ;
+  lapet:hasSpecification lapet:spec6_v1_ok_01 ;
+  lapet:hasContactGeometry lapet:geom6_ok_01 ;
+  lapet:hasControlVariable lapet:ctrl_field_ok_01, lapet:ctrl_current_ok_01 ;
+  lapet:hasMeasuredObservable lapet:obs_vxx_ok_01, lapet:obs_vxy_ok_01, lapet:obs_temp_ok_01 .
+
+# Invalid dataset instance A:
+# - wrong geometry class (4-terminal)
+# - missing specification
+# - only one control variable
+# - missing CurrentOrVoltageControl
+# - only one observable and it has two assigned channels
+lapet:run6hall_bad_01 a owl:NamedIndividual, lapet:SixTerminalHallRun ;
+  lapet:hasExperimentType lapet:SixTerminalHallExperiment ;
+  lapet:hasContactGeometry lapet:geom4_bad_01 ;
+  lapet:hasControlVariable lapet:ctrl_field_bad_01 ;
+  lapet:hasMeasuredObservable lapet:obs_vxx_bad_01 .
+
+# Invalid dataset instance B:
+# - two specifications (violates exact-one)
+# - controls include Temperature instead of CurrentOrVoltageControl
+# - vertical observable has no assigned channel
+lapet:run6hall_bad_02 a owl:NamedIndividual, lapet:SixTerminalHallRun ;
+  lapet:hasExperimentType lapet:SixTerminalHallExperiment ;
+  lapet:hasSpecification lapet:spec6_v1_bad_02a, lapet:spec6_v1_bad_02b ;
+  lapet:hasContactGeometry lapet:geom6_ok_02 ;
+  lapet:hasControlVariable lapet:ctrl_field_bad_02, lapet:ctrl_temp_bad_02 ;
+  lapet:hasMeasuredObservable lapet:obs_vxx_bad_02, lapet:obs_vxy_bad_02 .
