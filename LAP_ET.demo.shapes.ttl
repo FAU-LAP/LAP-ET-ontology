@@ -1,0 +1,99 @@
+@prefix lapet: <http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET/shapes/demo>
+  a owl:Ontology ;
+  rdfs:comment "Demonstration SHACL shapes for validating SixTerminalHallExperiment individuals in LAP_ET.owl." .
+
+lapet:SixTerminalHallExperimentDemoShape
+  a sh:NodeShape ;
+  sh:targetClass lapet:SixTerminalHallExperiment ;
+  sh:message "Six-terminal Hall experiments should follow a standard metadata pattern for comparability." ;
+
+  sh:property [
+    a sh:PropertyShape ;
+    sh:path lapet:hasSpecification ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:hasValue lapet:spec6_standard_v1 ;
+    sh:message "Exactly one specification is required and it must be spec6_standard_v1." ;
+  ] ;
+
+  sh:property [
+    a sh:PropertyShape ;
+    sh:path lapet:hasContactGeometry ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:hasValue lapet:geom6_standard_v1 ;
+    sh:message "Exactly one contact geometry is required and it must be geom6_standard_v1." ;
+  ] ;
+
+  sh:property [
+    a sh:PropertyShape ;
+    sh:path lapet:hasControlVariable ;
+    sh:minCount 2 ;
+    sh:maxCount 2 ;
+    sh:message "Exactly two control variables are required." ;
+  ] ;
+
+  sh:property [
+    a sh:PropertyShape ;
+    sh:path lapet:hasControlVariable ;
+    sh:qualifiedValueShape [ sh:class lapet:ExternalMagneticField ] ;
+    sh:qualifiedMinCount 1 ;
+    sh:qualifiedMaxCount 1 ;
+    sh:message "Exactly one control variable must be an ExternalMagneticField." ;
+  ] ;
+
+  sh:property [
+    a sh:PropertyShape ;
+    sh:path lapet:hasControlVariable ;
+    sh:qualifiedValueShape [
+      sh:or (
+        [ sh:class lapet:DeviceCurrent ]
+        [ sh:class lapet:DeviceVoltage ]
+      )
+    ] ;
+    sh:qualifiedMinCount 1 ;
+    sh:qualifiedMaxCount 1 ;
+    sh:message "Exactly one control variable must be DeviceCurrent or DeviceVoltage." ;
+  ] ;
+
+  sh:property [
+    a sh:PropertyShape ;
+    sh:path lapet:hasMeasuredObservable ;
+    sh:minCount 2 ;
+    sh:maxCount 3 ;
+    sh:message "Observables must include longitudinal and vertical voltage drop, with optional temperature." ;
+  ] ;
+
+  sh:property [
+    a sh:PropertyShape ;
+    sh:path lapet:hasMeasuredObservable ;
+    sh:qualifiedValueShape [ sh:class lapet:LongitudinalVoltageDrop ] ;
+    sh:qualifiedMinCount 1 ;
+    sh:qualifiedMaxCount 1 ;
+    sh:message "Exactly one LongitudinalVoltageDrop observable is required." ;
+  ] ;
+
+  sh:property [
+    a sh:PropertyShape ;
+    sh:path lapet:hasMeasuredObservable ;
+    sh:qualifiedValueShape [ sh:class lapet:VerticalVoltageDrop ] ;
+    sh:qualifiedMinCount 1 ;
+    sh:qualifiedMaxCount 1 ;
+    sh:message "Exactly one VerticalVoltageDrop observable is required." ;
+  ] ;
+
+  sh:property [
+    a sh:PropertyShape ;
+    sh:path lapet:hasMeasuredObservable ;
+    sh:qualifiedValueShape [ sh:class lapet:Temperature ] ;
+    sh:qualifiedMinCount 0 ;
+    sh:qualifiedMaxCount 1 ;
+    sh:message "Temperature observable is optional, at most once." ;
+  ] .

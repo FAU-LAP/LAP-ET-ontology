@@ -1,4 +1,4 @@
-@prefix : <http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET/> .
+@prefix : <http://www.semanticweb.org/yd27ovas/ontologies/2026/1ttl/LAP_ET/> .
 @prefix lapet: <http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .

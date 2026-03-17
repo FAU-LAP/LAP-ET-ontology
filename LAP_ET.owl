@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET/"
      xml:base="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET/"
+     xmlns:lapet="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
@@ -342,6 +343,165 @@
     <owl:Class rdf:about="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#VerticalVoltageDrop">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#ElectricalQuantity"/>
     </owl:Class>
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Demonstration Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <!-- http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#spec6_standard_v1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#spec6_standard_v1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#MeasurementSpecification"/>
+    </owl:NamedIndividual>
+
+
+    <!-- http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#spec6_experimental -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#spec6_experimental">
+        <rdf:type rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#MeasurementSpecification"/>
+    </owl:NamedIndividual>
+
+
+    <!-- http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#geom6_standard_v1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#geom6_standard_v1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#ContactGeometry"/>
+    </owl:NamedIndividual>
+
+
+    <!-- http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#geom6_alt_bad_02 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#geom6_alt_bad_02">
+        <rdf:type rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#ContactGeometry"/>
+    </owl:NamedIndividual>
+
+
+    <!-- http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#geom4_bad_01 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#geom4_bad_01">
+        <rdf:type rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#FourTerminalContactGeometry"/>
+    </owl:NamedIndividual>
+
+
+    <!-- http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#ctrl_field_ok_01 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#ctrl_field_ok_01">
+        <rdf:type rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#ExternalMagneticField"/>
+    </owl:NamedIndividual>
+
+
+    <!-- http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#ctrl_current_ok_01 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#ctrl_current_ok_01">
+        <rdf:type rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#DeviceCurrent"/>
+    </owl:NamedIndividual>
+
+
+    <!-- http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#ctrl_field_bad_01 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#ctrl_field_bad_01">
+        <rdf:type rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#ExternalMagneticField"/>
+    </owl:NamedIndividual>
+
+
+    <!-- http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#ctrl_field_bad_02 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#ctrl_field_bad_02">
+        <rdf:type rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#ExternalMagneticField"/>
+    </owl:NamedIndividual>
+
+
+    <!-- http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#ctrl_temp_bad_02 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#ctrl_temp_bad_02">
+        <rdf:type rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#Temperature"/>
+    </owl:NamedIndividual>
+
+
+    <!-- http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#obs_vxx_ok_01 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#obs_vxx_ok_01">
+        <rdf:type rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#LongitudinalVoltageDrop"/>
+    </owl:NamedIndividual>
+
+
+    <!-- http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#obs_vxy_ok_01 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#obs_vxy_ok_01">
+        <rdf:type rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#VerticalVoltageDrop"/>
+    </owl:NamedIndividual>
+
+
+    <!-- http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#obs_temp_ok_01 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#obs_temp_ok_01">
+        <rdf:type rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#Temperature"/>
+    </owl:NamedIndividual>
+
+
+    <!-- http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#obs_vxx_bad_01 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#obs_vxx_bad_01">
+        <rdf:type rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#LongitudinalVoltageDrop"/>
+    </owl:NamedIndividual>
+
+
+    <!-- http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#obs_vxx_bad_02 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#obs_vxx_bad_02">
+        <rdf:type rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#LongitudinalVoltageDrop"/>
+    </owl:NamedIndividual>
+
+
+    <!-- http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#obs_vxy_bad_02 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#obs_vxy_bad_02">
+        <rdf:type rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#VerticalVoltageDrop"/>
+    </owl:NamedIndividual>
+
+
+    <!-- http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#run6hall_ok_01 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#run6hall_ok_01">
+        <rdf:type rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#SixTerminalHallExperiment"/>
+        <lapet:hasSpecification rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#spec6_standard_v1"/>
+        <lapet:hasContactGeometry rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#geom6_standard_v1"/>
+        <lapet:hasControlVariable rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#ctrl_field_ok_01"/>
+        <lapet:hasControlVariable rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#ctrl_current_ok_01"/>
+        <lapet:hasMeasuredObservable rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#obs_vxx_ok_01"/>
+        <lapet:hasMeasuredObservable rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#obs_vxy_ok_01"/>
+        <lapet:hasMeasuredObservable rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#obs_temp_ok_01"/>
+    </owl:NamedIndividual>
+
+
+    <!-- http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#run6hall_bad_01 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#run6hall_bad_01">
+        <rdf:type rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#SixTerminalHallExperiment"/>
+        <lapet:hasContactGeometry rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#geom4_bad_01"/>
+        <lapet:hasControlVariable rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#ctrl_field_bad_01"/>
+        <lapet:hasMeasuredObservable rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#obs_vxx_bad_01"/>
+    </owl:NamedIndividual>
+
+
+    <!-- http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#run6hall_bad_02 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#run6hall_bad_02">
+        <rdf:type rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#SixTerminalHallExperiment"/>
+        <lapet:hasSpecification rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#spec6_standard_v1"/>
+        <lapet:hasSpecification rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#spec6_experimental"/>
+        <lapet:hasContactGeometry rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#geom6_alt_bad_02"/>
+        <lapet:hasControlVariable rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#ctrl_field_bad_02"/>
+        <lapet:hasControlVariable rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#ctrl_temp_bad_02"/>
+        <lapet:hasMeasuredObservable rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#obs_vxx_bad_02"/>
+        <lapet:hasMeasuredObservable rdf:resource="http://www.semanticweb.org/yd27ovas/ontologies/2026/1/LAP_ET#obs_vxy_bad_02"/>
+    </owl:NamedIndividual>
 </rdf:RDF>
 
 
